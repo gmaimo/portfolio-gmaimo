@@ -1,7 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Alegreya&family=Bree+Serif&family=Dancing+Script&family=Orbitron&family=Ruthie&display=swap");
-/* a:-webkit-any-link {
-    text-decoration: none;
-} */
 .btn-home {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
@@ -20,7 +17,7 @@
   animation-fill-mode: backwards;
   white-space: nowrap;
 }
-.btn-home:hover, .btn-home:active {
+.btn-home:hover {
   color: white;
   transform: scale(1.1);
 }
@@ -66,8 +63,7 @@
 .menu-btn__burger::after {
   transform: translateY(9px);
 }
-.menu-btn.active > .menu-btn__burger { /* 
-transform: translateX(-50px); */
+.menu-btn.active > .menu-btn__burger {
   background: transparent;
   box-shadow: none;
 }
@@ -92,9 +88,32 @@ transform: translateX(-50px); */
   transition: all 0.3s ease-in-out;
   font-weight: 650;
 }
-.btn-form:hover, .btn-form:active {
+.btn-form:hover {
   background-color: #e888a3;
   color: white;
+}
+
+.btn-project {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  padding: 6px;
+  font-size: 16px;
+  font-weight: 900;
+  border-radius: 3px;
+}
+.btn-project:hover {
+  color: white;
+}
+@media only screen and (max-width: 768px) {
+  .btn-project {
+    font-size: 25px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .btn-project {
+    font-size: 20px;
+  }
 }
 
 .btn-ty {
@@ -110,7 +129,7 @@ transform: translateX(-50px); */
   border-radius: 2px;
   letter-spacing: 0.2rem;
 }
-.btn-ty:hover, .btn-ty:active {
+.btn-ty:hover {
   background-color: #e888a3;
   color: white;
 }
@@ -125,57 +144,24 @@ transform: translateX(-50px); */
   }
 }
 
-.btn-project {
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  text-decoration: none;
-  text-transform: uppercase;
-  padding: 6px;
-  font-size: 16px;
-  font-weight: 900;
-  border-radius: 3px;
-}
-.btn-project:hover, .btn-project:active {
-  color: white;
-}
-@media only screen and (max-width: 768px) {
-  .btn-project {
-    font-size: 25px;
-  }
-}
-@media only screen and (max-width: 576px) {
-  .btn-project {
-    font-size: 20px;
-  }
+::-webkit-scrollbar {
+  width: 8px;
 }
 
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
+::-webkit-scrollbar-thumb {
+  background: #e888a3;
 }
-@keyframes blink {
-  50% {
-    border-color: white;
-  }
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9b5468;
 }
+
 @keyframes appear {
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
-  }
-}
-@keyframes disappear {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
   }
 }
 @keyframes appearNav {
@@ -192,16 +178,6 @@ transform: translateX(-50px); */
   }
   to {
     left: 100%;
-  }
-}
-@keyframes appearFromRight {
-  from {
-    opacity: 0;
-    left: 20px;
-  }
-  to {
-    opacity: 1;
-    left: 0;
   }
 }
 @keyframes zoomIn {
