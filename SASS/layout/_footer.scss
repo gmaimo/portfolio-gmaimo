@@ -1,0 +1,176 @@
+@use "../root/breakpoints"as *;
+@use "../root/colors"as *;
+@use "../root/fonts"as *;
+
+
+.social-media {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer {
+    font-family: $alegreya;
+    margin-top: 6rem;
+
+    padding: 2rem 14vw 0 14vw;
+}
+
+.social-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    list-style: none;
+
+    & a {
+        text-decoration: none;
+        color: $alice-blue;
+    }
+}
+
+//bottom footer
+
+.credits {
+    text-align: center;
+    padding: 1rem;
+}
+
+
+//left sidebar
+
+.sidebar-left {
+    position: fixed;
+    bottom: 0;
+    left: 40px;
+
+    overflow: hidden;
+    animation: appear 2s;
+    animation-delay: 2.5s;
+    animation-fill-mode: backwards;
+    white-space: nowrap;
+    z-index: 1;
+
+
+    & li,
+    a {
+        text-decoration: none;
+        color: inherit;
+        font-size: $display-2;
+    }
+
+    & li {
+        height: 55px;
+        position: relative;
+        list-style: none;
+        text-align: center;
+    }
+
+    & a {
+        cursor: auto;
+        display: block;
+        line-height: 55px;
+    }
+
+    svg {
+        cursor: pointer;
+        width: 16px;
+        height: 16px;
+        background-size: contain;
+        transition: all .1s ease-in;
+
+    }
+
+}
+
+.decoration-line {
+    height: 100px;
+    margin-top: 16px;
+
+    &-left {
+        margin-left: 8px;
+
+    }
+
+    &-right {
+        margin-left: 5.5px;
+    }
+}
+
+.dl-clear{
+    border-left: 1.5px solid $sect-2;
+}
+
+.dl-dark{
+    border-left: 1.5px solid $blue;
+}
+
+//right sidebar
+
+.sidebar-right {
+    position: fixed;
+    bottom: 0;
+    right: 40px;
+
+    overflow: hidden;
+    animation: appear 2s;
+    animation-delay: 2s;
+    animation-fill-mode: backwards;
+    white-space: nowrap;
+    z-index: 1;
+
+
+
+    & a {
+        writing-mode: vertical-lr;
+        //color: black;
+        color: inherit;
+        font-size: $display-2;
+        text-decoration: none;
+        margin-bottom: 20px;
+        transition: all .1s ease-in;
+    }
+}
+
+//footer small devices
+
+.footer-sm {
+
+    display: none;
+
+    & ol {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    & img {
+        width: 14px;
+    }
+}
+
+@media only screen and (max-width: $bp-md) {
+    .sidebar-left {
+        display: none;
+    }
+
+    .sidebar-right {
+        display: none;
+    }
+
+    .footer-sm {
+        display: block;
+    }
+
+
+}
+
+@media (hover: hover) {
+
+    .sidebar-left svg:hover {
+        color: $sect-2;
+    }
+
+    .sidebar-right a:hover {
+        color: $sect-2;
+    }
+}

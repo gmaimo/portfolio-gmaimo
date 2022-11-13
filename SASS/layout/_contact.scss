@@ -1,0 +1,98 @@
+@use "../root/breakpoints"as *;
+@use "../root/colors"as *;
+@use "../root/fonts"as *;
+
+.contact-container {
+
+    padding: 2rem 14vw 0 14vw;
+
+    & h2 {
+        margin-bottom: 4rem;
+    }
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+
+    & input,
+    & textarea {
+        padding: 6px;
+        margin: 10px;
+        font-size: $display-3;
+        font-family: $alegreya;
+        //background-color: $background-alt;
+        color: $black;
+        //border: .9px solid $sect-2;
+
+        &::placeholder {
+            color: #999d99;
+        }
+
+        &:focus {
+            outline: none !important;
+            border: 1px solid $sect-2 !important;
+            box-shadow: 0 0 10px $sect-2;
+        }
+    }
+}
+
+.form-header {
+    display: flex;
+
+    & input {
+        width: 100%;
+    }
+}
+
+.submit {
+    margin: 10px;
+}
+
+.form-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.info {
+    width: 30%;
+    color: $white;
+    margin: auto;
+    text-align: center;
+
+    & ul {
+        list-style: none;
+    }
+
+    & img {
+        width: 60px;
+    }
+}
+
+@media only screen and (max-width: $bp-md) {
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+
+        & input,
+        & textarea {
+            padding: 2px;
+
+            font-size: $display-1;
+        }
+
+        &::placeholder {
+            color: #999d99;
+            font-size: $display-1;
+        }
+    }
+
+    .form-header {
+        display: flex;
+        flex-direction: column;
+
+        & input {
+            width: auto;
+        }
+    }
+}

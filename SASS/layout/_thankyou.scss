@@ -1,0 +1,60 @@
+@use "../root/breakpoints"as *;
+@use "../root/colors"as *;
+@use "../root/fonts"as *;
+
+
+.main-ty{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & img{
+        width: 100px;
+    }
+
+    & h1{
+        font-size: $display-8-9;
+        margin-bottom: -.7rem;
+        margin-top: 1rem;
+    }
+}
+
+/* .bg-ty{
+    position: absolute;
+    top: -900px;
+    left: -60px;
+    transform: rotate(45deg);
+    font-size:100rem;
+    color: $sect-2;
+    overflow: hidden;
+    width: 100vw;
+} */
+
+.footer-ty {
+    display: block;
+    position: fixed;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    & ol {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    & img {
+        width: 16px;
+    }
+
+}
+
+.credits-ty{
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);    
+}
+/*  */;
