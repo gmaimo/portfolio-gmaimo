@@ -1,21 +1,18 @@
-@use "../root/breakpoints"as *;
-@use "../root/colors"as *;
-@use "../root/fonts"as *;
+@use "../root/var"as *;
 
 
-.social-media {
+/* .social-media {
     display: flex;
     justify-content: space-evenly;
-}
+} */
 
 footer {
     font-family: $alegreya;
     margin-top: 6rem;
-
     padding: 2rem 14vw 0 14vw;
 }
 
-.social-list {
+/* .social-list {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -23,32 +20,27 @@ footer {
 
     & a {
         text-decoration: none;
-        color: $alice-blue;
+        color: $footer-links;
     }
-}
+} */
 
 //bottom footer
-
 .credits {
     text-align: center;
     padding: 1rem;
 }
 
-
 //left sidebar
-
 .sidebar-left {
     position: fixed;
     bottom: 0;
     left: 40px;
-
     overflow: hidden;
     animation: appear 2s;
     animation-delay: 2.5s;
     animation-fill-mode: backwards;
     white-space: nowrap;
     z-index: 1;
-
 
     & li,
     a {
@@ -96,28 +88,24 @@ footer {
 }
 
 .dl-clear{
-    border-left: 1.5px solid $sect-2;
+    border-left: 1.5px solid $prim-clear;
 }
 
 .dl-dark{
-    border-left: 1.5px solid $blue;
+    border-left: 1.5px solid $prim-dark;
 }
 
 //right sidebar
-
 .sidebar-right {
     position: fixed;
     bottom: 0;
     right: 40px;
-
     overflow: hidden;
     animation: appear 2s;
     animation-delay: 2s;
     animation-fill-mode: backwards;
     white-space: nowrap;
     z-index: 1;
-
-
 
     & a {
         writing-mode: vertical-lr;
@@ -133,7 +121,6 @@ footer {
 //footer small devices
 
 .footer-sm {
-
     display: none;
 
     & ol {
@@ -160,17 +147,15 @@ footer {
     .footer-sm {
         display: block;
     }
-
-
 }
 
-@media (hover: hover) {
+@media (hover:hover) {
 
     .sidebar-left svg:hover {
-        color: $sect-2;
+        color: $prim-clear;
     }
 
     .sidebar-right a:hover {
-        color: $sect-2;
+        color: $prim-clear;
     }
 }

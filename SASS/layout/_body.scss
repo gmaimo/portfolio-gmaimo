@@ -1,8 +1,4 @@
-@use "../root/breakpoints"as *;
-@use "../root/colors"as *;
-@use "../root/fonts"as *;
-
-
+@use "../root/var"as *;
 
 *,
 ::before,
@@ -15,23 +11,21 @@
 
 body {
     font-family: 'Alegreya', serif;
-    background-color: $background;
-    overflow-x: hidden; //try to delete scrollbar
+    background-color: $main-clear;
+    overflow-x: hidden;
     padding-top: $nav-height;
     color: $black;
 
     &.dark {
-        background-color: #292c35;
-        color: white;
+        background-color: $main-dark;
+        color: $white;
     }
 }
-
 
 h2 {
     text-align: center;
     font-size: 4vw;
     margin-bottom: 1rem;
-    color: #bdb2ff;
     font-family: $title-font;
 
     @media only screen and (max-width: $bp-xl) {
@@ -39,77 +33,61 @@ h2 {
     }
 }
 
-
-
-
-
-
-
 // switch buttons style on changing theme
-
 .btn-clear {
-    background-color: $background-alt;
-    border: 1px solid #9b5468;
-    color: #9b5468;
+    background-color: $alt-clear;
+    border: 1px solid $th-clear;
+    color: $th-clear;
 
-    &:hover,
-    &:active {
-        background-color: #9b5468;
-        /* 
-        color: $background; */
+    &:hover{
+        background-color: $th-clear;
     }
 }
 
 .btn-dark {
     background-color: $black;
-    border: 1px solid #0173F7;
-    color: #0173F7;
+    border: 1px solid $th-dark;
+    color: $th-dark;
 
-    &:hover,
-    &:active {
-        background-color: #0173F7;
+    &:hover{
+        background-color: $th-dark;
     }
 }
 
-
 // switch card background on changing theme
-
 .card-clear {
-    background-color: $background-alt;
+    background-color: $alt-clear;
 }
 
 .card-dark {
-    background-color: black;
+    background-color: $black;
 }
 
 // switch text inputs style on changing theme
-
 .input-clear {
-    background-color: $background-alt;
-    border: .8px solid $sect-2;
+    background-color: $alt-clear;
+    border: .8px solid $prim-clear;
 }
 
 .input-dark {
-    background-color: black;
-    border: .8px solid $blue;
+    background-color: $black;
+    border: .8px solid $prim-dark;
 }
 
 // switch highlighted font color on changing theme
-
 .font-alt-clear {
-    color: $sect-2;
+    color: $prim-clear;
 }
 
 .font-alt-dark {
-    color: $blue;
+    color: $prim-dark;
 }
 
 //title and h2 colors
-
 .title-clear{
-    color: $blue;
+    color: $prim-dark;
 }
 
 .title-dark{
-    color: $sect-2;
+    color: $prim-clear;
 }

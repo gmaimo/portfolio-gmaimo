@@ -1,12 +1,8 @@
-@use "../root/breakpoints"as *;
-@use "../root/colors"as *;
-@use "../root/fonts"as *;
+@use "../root/var"as *;
 
 .projects-container {
   width: 100vw;
-  //scroll-margin-top: 12vh;
   margin-top: 4rem;
-
   padding: 2rem 10vw 0 10vw;
 
   & h2 {
@@ -25,40 +21,26 @@
 h1 {
   font-size: 2.2em;
 }
-//clear-dark mode
 
-.card-clear{
-  background-color: $background-th;
-  border: .1px solid #9b5468;
-
-  //border: 1px solid $sect-2;
-
-
-}
-
-.card-dark{
-  background-color: #292c35;
-  border: 1px solid #0173F7;
-
-  //color: #fff !important;
-
-}
-// base
+// project cards
 .card {
-
-  /* 
   position: relative;
-  */
+  width: 24vw;
+
   >.front,
   >.back {
-    /* display: block; */
     transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transition-duration: 1.5s;
     transition-property: transform, opacity;
+    color: inherit;
+    width: inherit;
+    background-size: cover !important;
+    background-position: center !important;
+    height: calc(22vw * .67);
+    padding: 1em 2em;
   }
-  
+
   >.front {
-    
     transform: rotateY(0deg);
   }
 
@@ -70,6 +52,26 @@ h1 {
     width: 100%;
     height: 100%;
     transform: rotateY(-180deg);
+  }
+
+  & ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin-top: 8px;
+
+
+    & li {
+      margin: 2px 3px;
+      padding: 1px 4px;
+      border-radius: 3px;
+    }
+  }
+
+  .project-btn-margin {
+    margin-top: 10px;
+    display: flex;
+    justify-content: end;
   }
 
   &:hover {
@@ -100,82 +102,36 @@ h1 {
   }
 }
 
-.card-list-clear > li{
-  border: .1px solid #9b5468;
-  background-color: $background-sec;
+//clear-dark mode on cards
+.card-clear {
+  background-color: $sec-clear;
+  border: .1px solid $th-clear;
 }
 
-.card-list-dark > li{
-  border: .1px solid #0173F7;
-background-color: rgb(60, 60, 60);
-
+.card-dark {
+  background-color: $main-dark;
+  border: 1px solid $th-dark;
 }
 
-// custom
-.card {
-  position: relative;
-  /* display: inline-block; */
-  width: 24vw; //290px;
-
-
-  >.front,
-  >.back {
-    /* 
-    display: block; */
-    color: inherit;
-    width: inherit;
-    background-size: cover !important;
-    background-position: center !important;
-    height: calc(22vw * .67); //180px
-    padding: 1em 2em;
-    //background: $background-alt;
-
-    /* p {
-      font-size: 0.9125rem;
-      line-height: 160%;
-      color: #999;
-    } */
-
-    & ul {
-      display: flex;
-      flex-wrap: wrap;
-      list-style: none;
-      margin-top: 8px;
-
-
-      & li {
-        margin: 2px 3px;
-        padding: 1px 4px;
-        border-radius: 3px;
-      }
-    }
-
-    .project-btn-margin {
-      margin-top: 10px;
-      display: flex;
-      justify-content: end;
-    }
-  }
+.card-list-clear>li {
+  border: .1px solid $th-clear;
+  background-color: $alter-clear;
 }
 
-/* .text-shadow {
-  text-shadow: 1px 1px rgba(0, 0, 0, 0.04), 2px 2px rgba(0, 0, 0, 0.04),
-    3px 3px rgba(0, 0, 0, 0.04), 4px 4px rgba(0, 0, 0, 0.04),
-    0.125rem 0.125rem rgba(0, 0, 0, 0.04), 6px 6px rgba(0, 0, 0, 0.04),
-    7px 7px rgba(0, 0, 0, 0.04), 8px 8px rgba(0, 0, 0, 0.04),
-    9px 9px rgba(0, 0, 0, 0.04), 0.3125rem 0.3125rem rgba(0, 0, 0, 0.04),
-    11px 11px rgba(0, 0, 0, 0.04), 12px 12px rgba(0, 0, 0, 0.04),
-    13px 13px rgba(0, 0, 0, 0.04), 14px 14px rgba(0, 0, 0, 0.04),
-    0.625rem 0.625rem rgba(0, 0, 0, 0.04), 16px 16px rgba(0, 0, 0, 0.04),
-    17px 17px rgba(0, 0, 0, 0.04), 18px 18px rgba(0, 0, 0, 0.04),
-    19px 19px rgba(0, 0, 0, 0.04), 1.25rem 1.25rem rgba(0, 0, 0, 0.04);
-} */
-
+.card-list-dark>li {
+  border: .1px solid $th-dark;
+  background-color: rgb(60, 60, 60);
+}
 
 @media only screen and (max-width: $bp-xl) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
   .projects-container {
     padding: 2rem 14vw 0 14vw;
   }
+
   .card {
     width: 32vw;
 
@@ -184,14 +140,6 @@ background-color: rgb(60, 60, 60);
       height: calc(30vw * .65);
     }
   }
-.gallery {
-    grid-template-columns: repeat(2, 1fr) !important;
-  }
-}
-
-@media only screen and (max-width: $bp-lg) {
-  
-  
 }
 
 @media only screen and (max-width: $bp-md) {
@@ -224,75 +172,8 @@ background-color: rgb(60, 60, 60);
   }
 }
 
-//boton modal
-.btn-modal {
-  margin-top: 10px;
-  display: flex;
-  justify-content: end;
-}
-
-//fin boton modal
-
-
-//ventana modal
-/* #modal {
-  display: none;
-}
-
-.container-modal {
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: rgba(144, 148, 150, 0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 100;
-} */
-
-/* .content-modal {
-  width: 100%;
-  max-width: 55rem;
-  height: 35rem;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 3px;
-
-  & h4 {
-    margin-bottom: 15px;
-  }
-
-  & p {
-    padding: 15px 0px;
-    border-top: 1px solid #dbdbdb;
-    border-bottom: 1px solid #dbdbdb;
-  }
-
-  & .btn-cerrar{
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    height: 80%;
-  }
-}
-
-
-.toggle-modal{
-  display: none;
-} */
-
-.btn-cerrar{
-  margin-top: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: end;
-  height: 70%;
-}
-
-.overlay{
+//modals
+.overlay {
   width: 100%;
   height: 100vh;
   position: fixed;
@@ -305,37 +186,49 @@ background-color: rgb(60, 60, 60);
   z-index: 100;
   animation: appear .5s ease-in-out;
 
-  &.active{
+  &.active {
     display: flex;
   }
 }
 
-.modal-content{
+.modal-content {
   width: 100%;
   max-width: 55rem;
   height: 35rem;
   padding: 20px;
-  
   border-radius: 3px;
 }
 
-.modal-clear{
+//boton modal
+.btn-modal {
+  margin-top: 10px;
+  display: flex;
+  justify-content: end;
+}
+
+.btn-cerrar {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  height: 70%;
+}
+
+//modal clear-dark mode
+.modal-clear {
   background-color: #fff;
 }
 
-.modal-dark{
+.modal-dark {
   background-color: #000;
   color: white;
 }
 
-.portfolio-card-clear{
+//portfolio card to change on theme switch
+.portfolio-card-clear {
   background-image: url(/img/projects/portfolio-captura2.PNG);
 }
 
-.portfolio-card-dark{
+.portfolio-card-dark {
   background-image: url(/img/projects/portfolio-captura1.PNG);
 }
-
-
-
-//fin ventana modal

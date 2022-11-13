@@ -1,9 +1,4 @@
-@use "../root/breakpoints"as *;
-@use "../root/colors"as *;
-@use "../root/fonts"as *;
-
-
-
+@use "../root/var"as *;
 
 // width
 ::-webkit-scrollbar {
@@ -12,10 +7,10 @@
 
 // handle
 ::-webkit-scrollbar-thumb {
-  background: $sect-2;
+  background: $prim-clear;
 }
 
 // handle on hover
 ::-webkit-scrollbar-thumb:hover {
-  background: $sect-2b;
+  background: $th-clear;
 }

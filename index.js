@@ -247,7 +247,6 @@ const btnMenu = document.querySelector('.menu-btn');
 const itemMenu = document.querySelectorAll('.nav-links__item');
 const statusMesnu = document.getElementById('navbarLinks');
 let counter = 0;
-
 function openNav() {
     statusMenu.style.height = '100%';
     counter = 1;
@@ -305,7 +304,6 @@ window.addEventListener("scroll", () => {
 
 /* const isChecked = document.getElementById('checkbox');
 let colour;
-
 function canvasColour() {
     textColour = "#e888a3";
     if(isChecked.checked == true){
@@ -386,7 +384,6 @@ window.onload = function () {
 /* 
 checkbox.addEventListener('change', () => {
     (canvasSwitch == false) ? TagCanvas.textColour = '#9b5468': TagCanvas.textColour = 'yellow';
-
     TagCanvas.Start('myCanvas');
 }); */
 

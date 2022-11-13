@@ -1,7 +1,4 @@
-@use "../root/breakpoints"as *;
-@use "../root/colors"as *;
-@use "../root/fonts"as *;
-
+@use "../root/var"as *;
 
 .mb-menu {
     display: flex;
@@ -12,11 +9,11 @@
     display: flex;
 }
 
+//switcher dark/clear mode on nav
 .checkbox {
     opacity: 0;
     position: absolute;
 }
-
 
 .label {
     background-color: black;
@@ -33,7 +30,7 @@
 }
 
 .ball {
-    background-color: #fff;
+    background-color: $white;
     border-radius: 50%;
     position: absolute;
     top: 4px;
@@ -55,13 +52,9 @@
     color: #f39c12;
 }
 
-
 //navbar
 .navbar {
     position: fixed;
-    
-    //background-color: inherit;
-
     left: 0;
     top: 0;
     z-index: 5;
@@ -70,7 +63,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: transform .5s; //???
+    /* transition: transform .5s; //??? */
 }
 
 .nav-links {
@@ -80,13 +73,6 @@
     counter-reset: item-counter;
     margin-right: 22px;
 
-    //where to put animations comments?
-    /* overflow: hidden;
-    animation: appear 1s;
-    animation-delay: 2.5s;
-    animation-fill-mode: backwards;
-    white-space: nowrap;
-    z-index: 1; */
     &__flags {
         display: flex;
         flex-direction: column;
@@ -98,10 +84,6 @@
             width: 36px;
             cursor: pointer;
             transition: transform 0.1s linear;
-
-            &:hover {
-                //transform: scale(1.2);
-            }
         }
 
         .hidden {
@@ -126,46 +108,52 @@
             counter-increment: item-counter;
             content: "0"counter(item-counter) ".";
             margin-left: -15px;
-            //color: $sect-2;
             text-align: right;
         }
 
         & span {
-            //color: $black;
             color: inherit;
             padding-left: 4px;
             cursor: pointer;
             transition: all .1s ease-in;
 
             &:active {
-                color: $sect-2;
+                color: $prim-clear;
             }
         }
     }
 }
 
 //toggle nav style on theme switch
-
 .nav-clear{
-    border-bottom: 1px solid #9b5468;
-    background-color: $background;
+    border-bottom: 1px solid $th-clear;
+    background-color: $main-clear;
 }
 
 .nav-dark{
-    border-bottom: 1px solid #0173F7;
-    background-color: #292c35;
+    border-bottom: 1px solid $th-dark;
+    background-color: $main-dark;
 }
 
 //toggle on list style pseudo elements
-
-.item-clear::before {
-    color: #9b5468;
+.item-clear {
+    & span:hover {
+        color: $th-clear;
+    }
+    &::before{
+        color: $th-clear;
+    }
 }
 
-.item-dark::before {
-    color: #0173F7;
-}
+.item-dark{
+    & span:hover{
+        color: $th-dark;
+    }
 
+    &::before {
+    color: $th-dark;
+}
+}
 
 //hide navbar on scroll down
 .nav--hidden {
@@ -196,7 +184,6 @@
     }
 
     .nav-links {
-        
         left: 100%;
         width: 100vw;
         height: 100vh;
@@ -204,12 +191,8 @@
         justify-content: space-evenly;
         padding: 50px 0 200px 0;
         position: absolute;
-        
         transition: left .5s ease-in-out;
         top: 70px;
-        
-        
-        
         
         & li {
             margin: .7rem;
@@ -230,19 +213,15 @@
         
         &.active {
             left: 0;
-        }/* 
-
-        &.hiddenNav{
-            animation: disappearNav .5s;
-        } */
+        }
     }
 
     .links-clear{
-        background-color: $background-sec;
+        background-color: $alter-clear;
     }
 
     .links-dark{
-        background-color: #292c35;
+        background-color: $main-dark;
     }
 }
 
@@ -253,12 +232,8 @@
 }
 
 @media (hover: hover) {
-    li>a span:hover {
-        color: $sect-2; //usa rel azul del logo
-    }
-
     .mylogo:hover {
-        color: $sect-2;
+        color: $prim-clear;
     }
 }
 

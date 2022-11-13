@@ -1,6 +1,4 @@
-@use "../root/breakpoints"as *;
-@use "../root/colors"as *;
-@use "../root/fonts"as *;
+@use "../root/var"as *;
 
 //header button <Contact me>
 .btn-home {
@@ -23,7 +21,7 @@
     white-space: nowrap;
 
     &:hover {
-        color: white;
+        color: $white;
         transform: scale(1.1);
     }
 
@@ -61,7 +59,6 @@
             height: 4px;
             background: $black;
             border-radius: 5px;
-            //box-shadow: 0 1px 2.5px $dark-grey;
             transition: all .5s ease-in-out;
         }
 
@@ -98,7 +95,7 @@
 
 //submit button en formulario, seccion "contact me"
 .btn-form {
-    border: 1.5px solid $sect-2;
+    border: 1.5px solid $prim-clear;
     width: 100%;
     font-size: $display-2;
     padding: 8px;
@@ -107,8 +104,14 @@
     font-weight: $fw-bold;
 
     &:hover{
-        background-color: $sect-2;
-        color: white;
+        background-color: $prim-clear;
+        color: $white;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .btn-form{
+        padding: 4px;
     }
 }
 
@@ -123,7 +126,7 @@
     border-radius: 3px;
 
     &:hover{
-        color: white;
+        color: $white;
     }
 
     @media only screen and (max-width: $bp-md) {
@@ -137,14 +140,14 @@
 
 //"thank you" button on "thankyou.html" page
 .btn-ty {
-    border: 1px solid $sect-2;
-    color: $sect-2;
+    border: 1px solid $prim-clear;
+    color: $prim-clear;
     cursor: pointer;
     transition: all .3s ease-in-out;
-    background-color: $background-alt;
+    background-color: $alt-clear;
 
     &:hover{
-        background-color: $sect-2;
+        background-color: $prim-clear;
         color: $white;
     }
 
