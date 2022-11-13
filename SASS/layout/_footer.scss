@@ -1,28 +1,10 @@
 @use "../root/var"as *;
 
-
-/* .social-media {
-    display: flex;
-    justify-content: space-evenly;
-} */
-
 footer {
     font-family: $alegreya;
     margin-top: 6rem;
     padding: 2rem 14vw 0 14vw;
 }
-
-/* .social-list {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    list-style: none;
-
-    & a {
-        text-decoration: none;
-        color: $footer-links;
-    }
-} */
 
 //bottom footer
 .credits {
@@ -68,7 +50,6 @@ footer {
         height: 16px;
         background-size: contain;
         transition: all .1s ease-in;
-
     }
 
 }
@@ -79,7 +60,6 @@ footer {
 
     &-left {
         margin-left: 8px;
-
     }
 
     &-right {
@@ -109,7 +89,6 @@ footer {
 
     & a {
         writing-mode: vertical-lr;
-        //color: black;
         color: inherit;
         font-size: $display-2;
         text-decoration: none;
@@ -119,7 +98,6 @@ footer {
 }
 
 //footer small devices
-
 .footer-sm {
     display: none;
 

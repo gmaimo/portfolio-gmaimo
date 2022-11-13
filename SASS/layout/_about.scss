@@ -17,6 +17,11 @@
     letter-spacing: .6px;
     padding-top: 2rem;
     margin-right: -2rem;
+
+    & a{
+        cursor: pointer;
+        text-decoration: none;
+    }
 }
 
 #myCanvas {

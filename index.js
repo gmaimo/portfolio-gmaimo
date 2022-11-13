@@ -9,7 +9,7 @@ const itemMenu = document.querySelectorAll('.nav-link');
 function toggleNav() {
     navbarLinks.classList.toggle('active');
     menuBtn.classList.toggle('active');
-}
+};
 
 // hide or show nav menu on mobile when clicking the hamburger/cross menu btn
 toggleButton.addEventListener('click', () => {
@@ -21,7 +21,7 @@ itemMenu.forEach(item => {
     item.addEventListener('click', function () {
         toggleNav();
     })
-})
+});
 
 //show flags
 let flag = 0; // 0 = spain flag;   1 = english flag
@@ -41,10 +41,9 @@ for (let i = 0; i < languages.length; i++) {
             flag = 0;
         }
     });
-}
+};
 
 //change website theme
-
 const checkbox = document.getElementById('checkbox');
 const box = document.getElementById('main');
 const btnTheme = document.querySelectorAll('.btn-clear');
@@ -58,7 +57,8 @@ const footTheme = document.querySelectorAll('.dl-clear');
 const TitleTheme = document.querySelectorAll(".title-clear");
 const modalBox = document.querySelectorAll(".modal-clear");
 const cardBg = document.querySelectorAll(".portfolio-card-clear");
-
+const modalWeb = document.querySelectorAll(".modal-btn-web-clear");
+const modalCode = document.querySelectorAll(".modal-btn-code-clear");
 
 //to change bg and border of box on main section 
 function toggleBackground() {
@@ -69,10 +69,9 @@ function toggleBackground() {
         box.classList.add('box-clear');
         box.classList.remove('box-dark');
     }
-}
+};
 
 //to change bg of navabar links on mobile nav screen
-
 function toggleNavBarLinks() {
     if (navbarLinks.classList.contains('links-clear')) {
         navbarLinks.classList.add('links-dark');
@@ -81,7 +80,7 @@ function toggleNavBarLinks() {
         navbarLinks.classList.add('links-clear');
         navbarLinks.classList.remove('links-dark');
     }
-}
+};
 
 //to change style of buttons
 function toggleBtn() {
@@ -94,7 +93,7 @@ function toggleBtn() {
             btn.classList.remove('btn-dark');
         }
     })
-}
+};
 
 //to change bg of cards
 function toggleCard() {
@@ -127,7 +126,7 @@ function toggleCard() {
             card.classList.remove('portfolio-card-dark');
         }
     })
-}
+};
 
 //to change style of inputs
 function toggleInput() {
@@ -140,7 +139,7 @@ function toggleInput() {
             input.classList.remove('input-dark');
         }
     })
-}
+};
 
 //to change highlited text color
 function toggleAltText() {
@@ -153,10 +152,9 @@ function toggleAltText() {
             item.classList.remove('font-alt-dark');
         }
     })
-}
+};
 
 //to change background color of nav
-
 function toggleNavBar() {
     if (navTheme.classList.contains('nav-clear')) {
         navTheme.classList.add('nav-dark');
@@ -165,7 +163,7 @@ function toggleNavBar() {
         navTheme.classList.add('nav-clear');
         navTheme.classList.remove('nav-dark');
     }
-}
+};
 
 //to change color of list style pseudo element on navbar
 function toggleNavItems() {
@@ -178,7 +176,7 @@ function toggleNavItems() {
             item.classList.remove('item-dark');
         }
     })
-}
+};
 
 //to change color of decoration line on footer
 function toggleFoot() {
@@ -191,10 +189,9 @@ function toggleFoot() {
             dl.classList.remove('dl-dark');
         }
     })
-}
+};
 
 //to change text color of title and h2
-
 function toggleTitles() {
     TitleTheme.forEach(title => {
         if (title.classList.contains('title-clear')) {
@@ -205,10 +202,9 @@ function toggleTitles() {
             title.classList.remove('title-dark');
         }
     })
-}
+};
 
-//modal
-
+//to change styles of modals
 function toggleModal() {
     modalBox.forEach(modal => {
         if (modal.classList.contains('modal-clear')) {
@@ -219,7 +215,27 @@ function toggleModal() {
             modal.classList.remove('modal-dark');
         }
     })
-}
+
+    modalWeb.forEach(btn => {
+        if (btn.classList.contains('modal-btn-web-clear')) {
+            btn.classList.add('modal-btn-web-dark');
+            btn.classList.remove('modal-btn-web-clear');
+        } else if (btn.classList.contains('modal-btn-web-dark')) {
+            btn.classList.add('modal-btn-web-clear');
+            btn.classList.remove('modal-btn-web-dark');
+        }
+    })
+
+    modalCode.forEach(btn => {
+        if (btn.classList.contains('modal-btn-code-clear')) {
+            btn.classList.add('modal-btn-code-dark');
+            btn.classList.remove('modal-btn-code-clear');
+        } else if (btn.classList.contains('modal-btn-code-dark')) {
+            btn.classList.add('modal-btn-code-clear');
+            btn.classList.remove('modal-btn-code-dark');
+        }
+    })
+};
 
 canvasSwitch = false;
 checkbox.addEventListener('change', () => {
@@ -240,55 +256,7 @@ checkbox.addEventListener('change', () => {
 });
 
 
-
-//burger to cross button on mobile nav menu
-/* 
-const btnMenu = document.querySelector('.menu-btn');
-const itemMenu = document.querySelectorAll('.nav-links__item');
-const statusMesnu = document.getElementById('navbarLinks');
-let counter = 0;
-function openNav() {
-    statusMenu.style.height = '100%';
-    counter = 1;
-  }
-  
-  function closeNav() {
-    statusMenu.style.height = '0%';
-    counter = 0;
-  }
-  
-  btnMenu.addEventListener('click', function () {
-    if (counter === 0) {
-      openNav();
-    } else if (counter === 1) {
-      closeNav();
-    }
-  });
-  for (let i = 0; i < itemMenu.length; i++) {
-    itemMenu[i].addEventListener('click', function () {
-        console.log(itemMenu.length);
-      closeNav();
-    });
-  } */
-
-
-/* menuBtn.addEventListener('click', () => {
-    /* menuBtn.classList.toggle('open'); *
-    if(!menuOpen){
-        menuBtn.classList.add('open');
-        menuOpen = true;
-    } else {
-        menuBtn.classList.remove('open');
-        menuOpen = false;
-    }
-}); */
-
-
-// hide and show nav menu on different events
-
-
 //enable hidden navbar on scroll up
-
 const nav = document.querySelector("#navbar");
 let lastScrollY = window.scrollY;
 
@@ -302,68 +270,7 @@ window.addEventListener("scroll", () => {
     lastScrollY = window.scrollY;
 });
 
-/* const isChecked = document.getElementById('checkbox');
-let colour;
-function canvasColour() {
-    textColour = "#e888a3";
-    if(isChecked.checked == true){
-        textCcolour = "blue";
-    } else if(isChecked.checked == false){
-        textColour = "#e888a3";
-    }
-}
-console.log(canvasColour); */
-//hacer OTRO COLOF SOLO PARA MI NOMBRE Y CANVAS 
-//canvas
-
-/* if (canvasSwitch == false) {
-    $(document).ready(function () {
-        if (!$("#myCanvas").tagcanvas({
-                //if else para color
-                textColour: "#9b5468",
-                outlineColour: "transparent",
-                reverse: true,
-                wheelZoom: false,
-                depth: 0.8,
-                maxSpeed: 0.04,
-                weight: true,
-                reverse: false,
-                initial: [-0.2, 0.2],
-                noSelect: true,
-                textHeight: 90,
-                weight: false,
-                weightSize: 1,
-                textFont: 'Roboto',
-            }, "tags")) {
-            //something went wrong, don't display canvas container
-            $("#myCanvasContainer");
-        }
-    })
-} else if (canvasSwitch == true) {
-    $(document).ready(function () {
-        if (!$("#myCanvas").tagcanvas({
-                //if else para color
-                textColour: "#0173F7",
-                outlineColour: "transparent",
-                reverse: true,
-                wheelZoom: false,
-                depth: 0.8,
-                maxSpeed: 0.04,
-                weight: true,
-                reverse: false,
-                initial: [-0.2, 0.2],
-                noSelect: true,
-                textHeight: 90,
-                weight: false,
-                weightSize: 1,
-                textFont: 'Roboto',
-            }, "tags")) {
-            //something went wrong, don't display canvas container
-            $("#myCanvasContainer");
-        }
-    })
-} */
-
+//estilos canvas tag
 window.onload = function () {
     // set colour of text and outline of active tag
     TagCanvas.textColour = '#9b5468';
@@ -381,11 +288,6 @@ window.onload = function () {
 
     TagCanvas.Start('myCanvas');
 };
-/* 
-checkbox.addEventListener('change', () => {
-    (canvasSwitch == false) ? TagCanvas.textColour = '#9b5468': TagCanvas.textColour = 'yellow';
-    TagCanvas.Start('myCanvas');
-}); */
 
 //scroll on top on refresh
 history.scrollRestoration = 'manual';
@@ -394,9 +296,7 @@ window.onbeforeunload = function () {
     window.scrollTo(0, 0);
 };
 
-
 //open modal window
-
 const modalBtns = document.querySelectorAll('[data-target]');
 const closeModal = document.querySelectorAll('.modal-btn');
 const overlay = document.querySelectorAll('.overlay');
@@ -405,31 +305,10 @@ modalBtns.forEach(btn => {
     btn.addEventListener('click', () => {
         document.querySelector(btn.dataset.target).classList.add("active");
     })
-})
+});
 
 closeModal.forEach(btn => {
     btn.addEventListener('click', () => {
         document.querySelector(btn.dataset.target).classList.remove("active");
-        /* btn.closest('.overlay').classList.remove("active"); */
     })
-})
-
-/* window.onclick = (e) => {
-    if (e.target == document.body){
-        /* const modals = document.querySelectorAll('.modal-content');
-        modals.forEach((modal) => modal.classList.remove("active")); *
-       overlay.classList.remove("active");
-    }
-} */
-
-/* document.addEventListener('click', function(event){
-    const inside = overlay.contains(".modal-content");
-    /* if(event.target.closest(".modal-content")) return;
-    overlay.classList.remove("active"); *
-    if (!inside){
-        overlay.classList.remove("active");
-    }
-}) */
-
-//Conseguir click outside modal   
-//refactoring y limpiar codigo, comentarios
+});

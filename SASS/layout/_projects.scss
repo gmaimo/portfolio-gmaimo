@@ -54,11 +54,16 @@ h1 {
     transform: rotateY(-180deg);
   }
 
+  .card-desc {
+    font-size: $display-2;
+  }
+
   & ul {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
     margin-top: 8px;
+    font-size: $display-2;
 
 
     & li {
@@ -69,7 +74,7 @@ h1 {
   }
 
   .project-btn-margin {
-    margin-top: 10px;
+    margin-top: 3px;
     display: flex;
     justify-content: end;
   }
@@ -139,6 +144,26 @@ h1 {
     >.back {
       height: calc(30vw * .65);
     }
+
+    & ul {
+      font-size: $display-3;
+    }
+
+    .card-desc {
+      font-size: $display-3;
+    }
+  }
+}
+
+@media only screen and (max-width: $bp-lg) {
+  .card {
+    & ul {
+      font-size: $display-2;
+    }
+  }
+
+  .card-desc {
+    display: none;
   }
 }
 
@@ -147,12 +172,22 @@ h1 {
     grid-template-columns: repeat(1, 1fr) !important;
   }
 
+  .card-desc {
+    margin-top: 1rem;
+    display: block;
+  }
+
   .card {
     width: 70vw;
 
     >.front,
     >.back {
       height: calc(70vw * .61);
+    }
+
+    & ul {
+      font-size: $display-4;
+      margin: .6rem 0;
     }
   }
 }
@@ -168,6 +203,16 @@ h1 {
     >.front,
     >.back {
       height: calc(80vw * .61);
+      padding: 1em .5em;
+    }
+
+    & ul {
+      font-size: $display-1;
+    }
+
+    .card-desc {
+      font-size: $display-1;
+      margin: 0;
     }
   }
 }
@@ -192,31 +237,105 @@ h1 {
 }
 
 .modal-content {
-  width: 100%;
-  max-width: 55rem;
+  width: 90%;
+  max-width: 50rem;
   height: 35rem;
   padding: 20px;
-  border-radius: 3px;
+  border-radius: 8px;
+  text-align: center;
+
+  & .modal-title {
+    text-align: center;
+    font-size: $display-6;
+    font-family: $title-font;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+  }
+
+  & h3 {
+    margin: 0 1rem;
+  }
+
+  & ul {
+    margin: 20px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: $display-3;
+
+    &.list-3>li{
+      padding: 3px 0;
+    }
+
+    &.list-2>li{
+      padding: 2px 0;
+    }
+
+    & .list-1>li {
+      padding: 1px 0;
+    }
+  }
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 15rem;
 }
 
 //boton modal
-.btn-modal {
-  margin-top: 10px;
-  display: flex;
-  justify-content: end;
+.modal-btn-web-clear {
+  background-color: $alt-clear;
+  border: 1px solid $web-btn-clear;
+  color: $web-btn-clear;
+
+  &:hover {
+    background-color: $web-btn-clear;
+  }
+}
+
+.modal-btn-web-dark {
+  background-color: $black;
+  border: 1px solid $web-btn-dark;
+  color: $web-btn-dark;
+
+  &:hover {
+    background-color: $web-btn-dark;
+  }
+}
+
+.modal-btn-code-clear {
+  background-color: $alt-clear;
+  border: 1px solid $code-btn-clear;
+  color: $code-btn-clear;
+
+  &:hover {
+    background-color: $code-btn-clear;
+  }
+}
+
+.modal-btn-code-dark {
+  background-color: $black;
+  border: 1px solid $code-btn-dark;
+  color: $code-btn-dark;
+
+  &:hover {
+    background-color: $code-btn-dark;
+  }
 }
 
 .btn-cerrar {
-  margin-top: 10px;
+  margin-top: 20px;
   display: flex;
   justify-content: center;
   align-items: end;
-  height: 70%;
 }
 
 //modal clear-dark mode
 .modal-clear {
-  background-color: #fff;
+  background-color: $alt-clear;
 }
 
 .modal-dark {
@@ -231,4 +350,31 @@ h1 {
 
 .portfolio-card-dark {
   background-image: url(/img/projects/portfolio-captura1.PNG);
+}
+
+@media only screen and (max-width: $bp-lg) {
+  .modal-content {
+    width: 90%;
+    height: 80%;
+
+    & .modal-title {
+      margin-top: .2rem;
+    }
+
+    & h3 {
+      font-size: $display-2;
+      margin-bottom: 1.5rem;
+    }
+
+    & ul {
+      margin: 0px;
+      font-size: $display-1;
+    }
+  }
+
+  .modal-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2rem 0 0 0;
+  }
 }

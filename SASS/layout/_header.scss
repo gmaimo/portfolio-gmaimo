@@ -63,7 +63,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* transition: transform .5s; //??? */
 }
 
 .nav-links {
@@ -236,5 +235,3 @@
         color: $prim-clear;
     }
 }
-
-//check .active (javascript?)
