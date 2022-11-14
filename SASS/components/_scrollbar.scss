@@ -7,10 +7,10 @@
 
 // handle
 ::-webkit-scrollbar-thumb {
-  background: $prim-clear;
+  background: lightgrey;
 }
 
 // handle on hover
 ::-webkit-scrollbar-thumb:hover {
-  background: $th-clear;
+  background: rgb(106, 106, 106);
 }

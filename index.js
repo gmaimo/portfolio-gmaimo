@@ -50,15 +50,17 @@ const btnTheme = document.querySelectorAll('.btn-clear');
 const cardTheme = document.querySelectorAll('.card-clear');
 const cardListTheme = document.querySelectorAll('.card-list-clear');
 const inputTheme = document.querySelectorAll('.input-clear');
+const formFocus = document.querySelectorAll('.form-clear');
 const altTextTheme = document.querySelectorAll('.font-alt-clear');
 const navTheme = document.querySelector('.nav-clear');
 const navItemTheme = document.querySelectorAll('.item-clear');
-const footTheme = document.querySelectorAll('.dl-clear');
 const TitleTheme = document.querySelectorAll(".title-clear");
 const modalBox = document.querySelectorAll(".modal-clear");
 const cardBg = document.querySelectorAll(".portfolio-card-clear");
 const modalWeb = document.querySelectorAll(".modal-btn-web-clear");
 const modalCode = document.querySelectorAll(".modal-btn-code-clear");
+const footTheme = document.querySelectorAll('.dl-clear');
+const footLink = document.querySelectorAll(".foot-clear");
 
 //to change bg and border of box on main section 
 function toggleBackground() {
@@ -139,6 +141,16 @@ function toggleInput() {
             input.classList.remove('input-dark');
         }
     })
+
+    formFocus.forEach(input => {
+        if (input.classList.contains('form-clear')) {
+            input.classList.add('form-dark');
+            input.classList.remove('form-clear');
+        } else if (input.classList.contains('form-dark')) {
+            input.classList.add('form-clear');
+            input.classList.remove('form-dark');
+        }
+    })
 };
 
 //to change highlited text color
@@ -187,6 +199,16 @@ function toggleFoot() {
         } else if (dl.classList.contains('dl-dark')) {
             dl.classList.add('dl-clear');
             dl.classList.remove('dl-dark');
+        }
+    })
+
+    footLink.forEach(link => {
+        if (link.classList.contains('foot-clear')) {
+            link.classList.add('foot-dark');
+            link.classList.remove('foot-clear');
+        } else if (link.classList.contains('foot-dark')) {
+            link.classList.add('foot-clear');
+            link.classList.remove('foot-dark');
         }
     })
 };

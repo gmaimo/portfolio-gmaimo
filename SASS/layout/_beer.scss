@@ -1,0 +1,26 @@
+@use "../root/var"as *;
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+video{
+    width: 60%;
+    height: 40%; 
+}
+
+.beer-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: $bp-sm) {
+    video{
+        width: 95%;
+        height: 50%; 
+    }
+}

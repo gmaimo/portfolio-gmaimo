@@ -23,11 +23,27 @@
         &::placeholder {
             color: #999d99;
         }
+    }
+}
 
-        &:focus {
+.form-clear{
+    & input,
+    & textarea{
+        &:focus{
             outline: none !important;
             border: 1px solid $prim-clear !important;
             box-shadow: 0 0 10px $prim-clear;
+        }
+    }
+}
+
+.form-dark{
+    & input,
+    & textarea{
+        &:focus{
+            outline: none !important;
+            border: 1px solid $prim-dark !important;
+            box-shadow: 0 0 10px $prim-dark;
         }
     }
 }

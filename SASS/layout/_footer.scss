@@ -127,13 +127,23 @@ footer {
     }
 }
 
-@media (hover:hover) {
+
+
+.foot-clear:hover{
+    color: $th-clear;
+}
+
+.foot-dark:hover{
+    color: $th-dark;
+}
+
+/* @media (hover:hover) {
 
     .sidebar-left svg:hover {
-        color: $prim-clear;
+        
     }
 
     .sidebar-right a:hover {
         color: $prim-clear;
     }
-}
+} */

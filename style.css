@@ -157,11 +157,11 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #e888a3;
+  background: lightgrey;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #9b5468;
+  background: rgb(106, 106, 106);
 }
 
 @keyframes appear {
@@ -486,11 +486,6 @@ h2 {
 @media only screen and (max-width: 576px) {
   .mylogo {
     margin-left: 25px;
-  }
-}
-@media (hover: hover) {
-  .mylogo:hover {
-    color: #e888a3;
   }
 }
 .home-container {
@@ -1075,10 +1070,17 @@ h1 {
 .contact-form input::placeholder, .contact-form textarea::placeholder {
   color: #999d99;
 }
-.contact-form input:focus, .contact-form textarea:focus {
+
+.form-clear input:focus, .form-clear textarea:focus {
   outline: none !important;
   border: 1px solid #e888a3 !important;
   box-shadow: 0 0 10px #e888a3;
+}
+
+.form-dark input:focus, .form-dark textarea:focus {
+  outline: none !important;
+  border: 1px solid #1DB3E7 !important;
+  box-shadow: 0 0 10px #1DB3E7;
 }
 
 .form-header {
@@ -1226,14 +1228,24 @@ footer {
     display: block;
   }
 }
-@media (hover: hover) {
-  .sidebar-left svg:hover {
-    color: #e888a3;
-  }
-  .sidebar-right a:hover {
-    color: #e888a3;
-  }
+.foot-clear:hover {
+  color: #9b5468;
 }
+
+.foot-dark:hover {
+  color: #2151c2;
+}
+
+/* @media (hover:hover) {
+
+    .sidebar-left svg:hover {
+
+    }
+
+    .sidebar-right a:hover {
+        color: $prim-clear;
+    }
+} */
 .main-ty {
   display: flex;
   flex-direction: column;
@@ -1271,6 +1283,31 @@ footer {
   bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+video {
+  width: 60%;
+  height: 40%;
+}
+
+.beer-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 576px) {
+  video {
+    width: 95%;
+    height: 50%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
