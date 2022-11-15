@@ -44,7 +44,6 @@
 .menu-btn__burger {
   width: 30px;
   height: 4px;
-  background: black;
   border-radius: 5px;
   transition: all 0.5s ease-in-out;
 }
@@ -53,7 +52,6 @@
   position: absolute;
   width: 30px;
   height: 4px;
-  background: black;
   border-radius: 5px;
   transition: all 0.5s ease-in-out;
 }
@@ -62,6 +60,18 @@
 }
 .menu-btn__burger::after {
   transform: translateY(9px);
+}
+.menu-btn .burger-clear {
+  background: black;
+}
+.menu-btn .burger-clear::before, .menu-btn .burger-clear::after {
+  background: black;
+}
+.menu-btn .burger-dark {
+  background: white;
+}
+.menu-btn .burger-dark::before, .menu-btn .burger-dark::after {
+  background: white;
 }
 .menu-btn.active > .menu-btn__burger {
   background: transparent;
@@ -956,7 +966,7 @@ h1 {
 .modal-content {
   width: 90%;
   max-width: 50rem;
-  height: 35rem;
+  height: 37rem;
   padding: 20px;
   border-radius: 8px;
   text-align: center;
@@ -966,7 +976,7 @@ h1 {
   font-size: 36px;
   font-family: "Dancing Script", cursive;
   margin-bottom: 1rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 .modal-content h3 {
   margin: 0 1rem;
@@ -980,14 +990,15 @@ h1 {
   align-items: center;
   font-size: 16px;
 }
-.modal-content ul.list-3 > li {
-  padding: 3px 0;
+.modal-content ul.list-1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  text-transform: uppercase;
 }
 .modal-content ul.list-2 > li {
   padding: 2px 0;
-}
-.modal-content ul .list-1 > li {
-  padding: 1px 0;
 }
 
 .modal-buttons {
@@ -1328,7 +1339,8 @@ footer {
   transform: translateX(-50%);
 }
 
-header {
+.beer-section {
+  margin-top: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1350,6 +1362,39 @@ video {
   video {
     width: 95%;
     height: 50%;
+  }
+}
+.pagaya-section {
+  margin-top: 4rem;
+}
+
+.pagaya_row {
+  padding: 2rem 10vw 0 10vw;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pagaya_column {
+  flex: 33%;
+}
+.pagaya_column img {
+  width: 100%;
+  padding: 5px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .pagaya_column {
+    flex: 50%;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .pagaya_column {
+    flex: 100%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .pagaya_row {
+    padding: 2rem 1rem;
   }
 }
 

@@ -255,7 +255,7 @@ h1 {
 .modal-content {
   width: 90%;
   max-width: 50rem;
-  height: 35rem;
+  height: 37rem;
   padding: 20px;
   border-radius: 8px;
   text-align: center;
@@ -265,7 +265,7 @@ h1 {
     font-size: $display-6;
     font-family: $title-font;
     margin-bottom: 1rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
 
   & h3 {
@@ -281,16 +281,16 @@ h1 {
     align-items: center;
     font-size: $display-3;
 
-    &.list-3>li {
-      padding: 3px 0;
+    &.list-1 {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+      text-transform: uppercase;
     }
 
     &.list-2>li {
       padding: 2px 0;
-    }
-
-    & .list-1>li {
-      padding: 1px 0;
     }
   }
 }

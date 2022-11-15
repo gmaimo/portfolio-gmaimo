@@ -54,6 +54,8 @@ const formFocus = document.querySelectorAll('.form-clear');
 const altTextTheme = document.querySelectorAll('.font-alt-clear');
 const navTheme = document.querySelector('.nav-clear');
 const navItemTheme = document.querySelectorAll('.item-clear');
+const navBurger = document.querySelector('.burger-clear');
+const navbarItems = document.querySelector('.links-clear');
 const TitleTheme = document.querySelectorAll(".title-clear");
 const modalBox = document.querySelectorAll(".modal-clear");
 const cardBg = document.querySelectorAll(".portfolio-card-clear");
@@ -73,14 +75,35 @@ function toggleBackground() {
     }
 };
 
+//to change color of list numbers on nav
+function toggleNum() {
+    navItemTheme.forEach(num => {
+        if (num.classList.contains('item-clear')) {
+            num.classList.add('item-dark');
+            num.classList.remove('item-clear');
+        } else if (num.classList.contains('item-dark')) {
+            num.classList.add('item-clear');
+            num.classList.remove('item-dark');
+        }
+    })
+};
+
 //to change bg of navabar links on mobile nav screen
-function toggleNavBarLinks() {
-    if (navbarLinks.classList.contains('links-clear')) {
-        navbarLinks.classList.add('links-dark');
-        navbarLinks.classList.remove('links-clear');
-    } else if (navbarLinks.classList.contains('links-dark')) {
-        navbarLinks.classList.add('links-clear');
-        navbarLinks.classList.remove('links-dark');
+function toggleNavbarItems() {
+    if (navbarItems.classList.contains('links-clear')) {
+        navbarItems.classList.add('links-dark');
+        navbarItems.classList.remove('links-clear');
+    } else if (navbarItems.classList.contains('links-dark')) {
+        navbarItems.classList.add('links-clear');
+        navbarItems.classList.remove('links-dark');
+    }
+
+    if (navBurger.classList.contains('burger-clear')) {
+        navBurger.classList.add('burger-dark');
+        navBurger.classList.remove('burger-clear');
+    } else if (navBurger.classList.contains('burger-dark')) {
+        navBurger.classList.add('burger-clear');
+        navBurger.classList.remove('burger-dark');
     }
 };
 
@@ -267,8 +290,9 @@ checkbox.addEventListener('change', () => {
     toggleCard();
     toggleInput();
     toggleAltText();
+    toggleNum();
     toggleNavBar();
-    toggleNavItems();
+    toggleNavbarItems();
     toggleFoot();
     toggleTitles();
     toggleModal();

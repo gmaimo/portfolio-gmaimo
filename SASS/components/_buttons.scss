@@ -47,7 +47,6 @@
     &__burger {
         width: 30px;
         height: 4px;
-        background: $black;
         border-radius: 5px;
         transition: all .5s ease-in-out;
 
@@ -57,7 +56,6 @@
             position: absolute;
             width: 30px;
             height: 4px;
-            background: $black;
             border-radius: 5px;
             transition: all .5s ease-in-out;
         }
@@ -68,6 +66,24 @@
 
         &::after {
             transform: translateY(9px);
+        }
+    }
+
+    .burger-clear{
+        background: $black;
+
+        &::before,
+        &::after {
+            background: $black;
+        }
+    }
+
+    .burger-dark{
+        background: $white;
+
+        &::before,
+        &::after {
+            background: $white;
         }
     }
 

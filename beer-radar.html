@@ -14,6 +14,37 @@
 
 <body>
     <header>
+        <!--nav bar-->
+        <nav id="navbar" class="navbar nav-clear">
+            <div><a href="https://www.gmaimo.com" class="mylogo"><img src="/img/about/logo3.svg" class="logo-img" alt=""></a></div>
+            <div class="mb-menu">
+                <div class="mb-flagdark">
+                    <div class="nav-links__flags">
+                        <img class="flag spanish hidden" src="img/header/spain.png" alt="spanish flag">
+                        <img class="flag english" src="img/header/united-kingdom.png" alt="UK flag">
+                    </div>
+                    <div>
+                        <input type="checkbox" id="checkbox" class="checkbox">
+                        <label for="checkbox" class="label">
+                            <i class="fas fa-sun"></i>
+                            <i class="fas fa-moon"></i>
+                            <div class="ball"></div>
+                        </label>
+                    </div>
+                </div>
+                <div id="toggleButton" class="menu-btn">
+                    <div class="menu-btn__burger"></div>
+                </div>
+            </div>
+            <ol id="navbarLinks" class="nav-links links-clear">
+                <li><a class="nav-link item-clear" href="https://github.com/gmaimo/brewerie-app"><span>Ver código</span></a></li>
+                <li><a class="nav-link item-clear" href="https://drive.google.com/file/d/1MrdKP6aBoRJlcJ8FjoQlMo-9bedFiHxR/view?usp=share_link"><span>Link video</span></a></li>
+                <li><a class="nav-link item-clear" href="https://www.gmaimo.com"><span>Página principal</span></a></li>
+            </ol>
+        </nav>
+    </header>
+
+    <section class="beer-section">
         <div class="beer-content">
             <video src="/img/projects/beer-radar.mp4"
                 controls>
@@ -24,24 +55,101 @@
             <a href="https://www.gmaimo.com" class="btn-ty">Regresar</a>
         </div>
 
-    </header>
+    </section>
 
+    <!--footer-->
     <footer>
-        <div class="footer-ty">
-            <ol>
-                <li><a href="https://www.github.com/gmaimo"><img src="/img/logos/github-original.svg"
-                            style="transform: translateY(-.8px)" alt="github logo"></a></li>
-                <li><a href="https://www.linkedin.com/in/gmaimo"><img src="/img/logos/linkedin (2).png"
-                            style="transform: translateY(-1.5px)" alt="linkedin logo"></a></li>
-                <li><a href="https://www.instagram.com/mm_webdevelopment"><img src="/img/logos/instagram.png"
-                            style="scale:.85" alt="instagram logo"></a></li>
-                <li><a href="https://twitter.com/mm_webdev"><img src="/img/logos/twitter.png" alt="twitter logo"></a>
-                </li>
-                <li><a href="mailto:gabrielmaimorigo@gmail.com"><img src="/img/logos/gmail.svg" alt="gmail logo"></a>
-                </li>
-            </ol>
+        <div class="sidebar-left">
+            <ul>
+                <li><a class="foot-clear" href="https://www.github.com/gmaimo" aria-label="GitHub" target="_blank"
+                        rel="noreferrer"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" class="feather feather-github">
+                            <title>GitHub</title>
+                            <path
+                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                            </path>
+                        </svg></a></li>
+                <li><a class="foot-clear" href="https://www.linkedin.com/in/gmaimo" aria-label="Linkedin"
+                        target="_blank" rel="noreferrer"><svg xmlns="http://www.w3.org/2000/svg" role="img"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin">
+                            <title>LinkedIn</title>
+                            <path
+                                d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                            </path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg></a></li>
+                <li><a class="foot-clear" href="https://www.instagram.com/mm_webdevelopment" aria-label="Instagram"
+                        target="_blank" rel="noreferrer"><svg xmlns="http://www.w3.org/2000/svg" role="img"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram">
+                            <title>Instagram</title>
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg></a></li>
+                <li><a class="foot-clear" href="https://twitter.com/mm_webdev" aria-label="Twitter" target="_blank"
+                        rel="noreferrer"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" class="feather feather-twitter">
+                            <title>Twitter</title>
+                            <path
+                                d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                            </path>
+                        </svg></a></li>
+                <div class="decoration-line decoration-line-left dl-clear"></div>
+            </ul>
         </div>
-        <div class="credits-ty">
+        <div class="sidebar-right">
+            <div><a class="foot-clear" href="mailto:gabrielmaimorigo@gmail.com">gabrielmaimorigo@gmail.com</a></div>
+            <div class="decoration-line decoration-line-right dl-clear"></div>
+        </div>
+
+        <div class="footer-sm">
+            <ul>
+                <li><a class="foot-clear" href="https://www.github.com/gmaimo" aria-label="GitHub" target="_blank"
+                        rel="noreferrer"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" class="feather feather-github">
+                            <title>GitHub</title>
+                            <path
+                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                            </path>
+                        </svg></a></li>
+                <li><a class="foot-clear" href="https://www.linkedin.com/in/gmaimo" aria-label="Linkedin"
+                        target="_blank" rel="noreferrer"><svg xmlns="http://www.w3.org/2000/svg" role="img"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin">
+                            <title>LinkedIn</title>
+                            <path
+                                d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                            </path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg></a></li>
+                <li><a class="foot-clear" href="https://www.instagram.com/mm_webdevelopment" aria-label="Instagram"
+                        target="_blank" rel="noreferrer"><svg xmlns="http://www.w3.org/2000/svg" role="img"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram">
+                            <title>Instagram</title>
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg></a></li>
+                <li><a class="foot-clear" href="https://twitter.com/mm_webdev" aria-label="Twitter" target="_blank"
+                        rel="noreferrer"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" class="feather feather-twitter">
+                            <title>Twitter</title>
+                            <path
+                                d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                            </path>
+                        </svg></a></li>
+            </ul>
+        </div>
+        <div class="credits">
             <h6>Designed & created by Gabriel Maimó</h6>
         </div>
     </footer>

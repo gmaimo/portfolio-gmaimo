@@ -1,0 +1,39 @@
+@use "../root/var"as *;
+
+.pagaya-section{
+    margin-top: 4rem;
+}
+
+.pagaya_row{
+    padding: 2rem 10vw 0 10vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pagaya_column{
+    flex: 33%;
+
+
+    & img{
+        width: 100%;
+        padding: 5px;
+    }
+}
+
+@media only screen and  (max-width: $bp-xl) {
+    .pagaya_column{
+        flex: 50%;
+    }
+}
+
+@media only screen and  (max-width: $bp-lg) {
+    .pagaya_column{
+        flex: 100%;
+    }
+}
+
+@media only screen and  (max-width: $bp-md) {
+    .pagaya_row{
+        padding: 2rem 1rem;
+    }
+}
