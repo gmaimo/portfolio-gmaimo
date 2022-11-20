@@ -145,7 +145,7 @@
 @media only screen and (max-width: 576px) {
   .btn-project {
     font-size: 12px;
-    min-width: 3.3rem;
+    min-width: 4rem;
     margin-right: 10px;
   }
 }
@@ -229,8 +229,8 @@
   }
 }
 *,
-::before,
-::after {
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -860,7 +860,7 @@ h1 {
 }
 
 .card-dark {
-  background-color: #292c35;
+  background-color: black;
   border: 1px solid #2151c2;
 }
 
@@ -964,7 +964,7 @@ h1 {
 }
 
 .modal-content {
-  width: 90%;
+  width: 80%;
   max-width: 50rem;
   height: 37rem;
   padding: 20px;

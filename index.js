@@ -358,3 +358,10 @@ closeModal.forEach(btn => {
         document.querySelector(btn.dataset.target).classList.remove("active");
     })
 });
+
+/* window.onclick = (e) => {
+    if(e.target == body){
+        const modals = document.querySelectorAll('.overlay');
+        modals.forEach((modal) => modal.classList.remove("active"));
+    }
+} */

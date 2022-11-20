@@ -125,7 +125,7 @@ h1 {
 }
 
 .card-dark {
-  background-color: $main-dark;
+  background-color: $black;
   border: 1px solid $th-dark;
 }
 
@@ -253,12 +253,13 @@ h1 {
 }
 
 .modal-content {
-  width: 90%;
+  width: 80%;
   max-width: 50rem;
   height: 37rem;
   padding: 20px;
   border-radius: 8px;
   text-align: center;
+
 
   & .modal-title {
     text-align: center;
