@@ -1,0 +1,69 @@
+{
+    "navbar": {
+        "link-1": "Inicio",
+        "link-2": "Sobre mí",
+        "link-3": "Proyectos",
+        "link-4": "Contacto",
+        "pdf": "Mi CV"
+    },
+    "atf": {
+        "greet": "Soy",
+        "subtitle-xl": "Un desarrollador web junior Fullstack con ganas de trabajar en proyectos reales.",
+        "subtitle-sm": "Desarrollador web junior Fullstack.",
+        "atf-contact": "Contáctame"
+    },
+    "about-me": {
+        "about-title": "Sobre mí",
+        "about-p1": "En Marzo de 2022 descubrí los bootcamps sobre desarrollo web, hacía tiempo quería realizar un cambio en mi vida y la programación siempre me había llamado la atención. Cursé el ",
+        "about-a1": "bootcamp Hackademy de Aulab",
+        "about-span1": " donde aprendí varias tecnologías.",
+        "about-p2": "Ahora soy consciente de la cantidad de material didáctico y documentación que está al alcance de todos. Por lo que continúo absorbiendo conocimientos de forma autodidacta. Actualmente curso ",
+        "about-a2": "Máster Completo en Java (+127 hrs)",
+        "about-span2": " en la plataforma ",
+        "about-span4": ".",
+        "about-b": "En esta sección se puede observar un mapa con las tecnologías que conozco."
+    },
+    "projects": {
+        "projects-title": "Proyectos",
+        "project1-desc": "Proyecto final del bootcamp Hackademy de Aulab. Implementación de una página web de compra-venta de articulos de segunda mano. Incluye las siguientes funcionalidades:",
+        "project1-li1": "Autentificación con Fortify",
+        "project1-li2": "Opción subir anuncio y visualización de los mismos",
+        "project1-li3": "Relaciones 1-N",
+        "project1-li4": "Sección revisor para moderar anuncios",
+        "project1-li5": "Modelo Vista Controlador (MVC)",
+        "project1-li6": "Multi-lenguaje. Español, Inglés e Italiano",
+        "project1-li7": "Queue work asíncrona para redimensión de imagenes subidas",
+        "project1-li8": "API de Google vision con detección de caras",
+        "project1-li9": "Búsqueda de contenido por categorías",
+        "project1-li10": "Sección \"Trabaja con nosotros\" con envío de formulario",
+        "project-cbtn": "Código",
+        "project-gbtn": "Galería",
+        "project2-desc": "Página web donde encontrar nuevas cervecerías con una amplia carta de cervezas disponible.",
+        "project2-li1": "Autenticación con Fortify",
+        "project2-li2": "Opción subir cervecería",
+        "project2-li3": "Opción subir cerveza",
+        "project2-li4": "Relaciones 1-N",
+        "project2-li5": "Relaciones N-N (Cervecerías - Cervezas)",
+        "project2-li6": "Modelo Vista Controlador (MVC)",
+        "project2-li7": "Responsive",
+        "project2-li8": "Sección sugerir cervecería - formulario",
+        "project2-li9": "Opción editar y eliminar para el autor del artículo",
+        "project3-desc": "Simulación de la página principal de la Agencia Espacial Europea. Página dedicada completamente al front-end.",
+        "project4-desc": "Listado de estrellas \"con nombre\" obtenidas mediante una API rest. Se detalla la información básica de las estrellas en cards con el color de la estrella de fondo.",
+        "project5-title": "Calculadora",
+        "project5-desc": "Calculadora básica mediante javascript.",
+        "project6-desc": "Muestra una descripción de mis conocimientos, una sección con mis proyectos y un formulario de contacto. Incluye las siguientes funcionalidades:",
+        "project6-li1": "Modo oscuro",
+        "project6-li2": "Multi-lenguaje",
+        "project6-li3": "Envio de formulario mediante plataforma \"formsubmit.co\"",
+        "project6-li4": "Uso de procesador de CSS SASS",
+        "project6-li5": "Uso de jQuery para mapa de etiquetas"
+    },
+    "contact": {
+        "contact-title": "Contacto",
+        "contact-btn": "Enviar mensaje"
+    },
+    "footer": {
+        "credits": "Diseño y código - Gabriel Maimó &trade;"
+    }
+}

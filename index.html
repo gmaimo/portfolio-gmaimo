@@ -20,29 +20,37 @@
             <div><a href="#home" class="mylogo"><img src="/img/about/logo3.svg" class="logo-img" alt=""></a></div>
             <div class="mb-menu">
                 <div class="mb-flagdark">
-                    <div class="nav-links__flags">
-                        <img class="flag spanish hidden" src="img/header/spain.png" alt="spanish flag">
-                        <img class="flag english" src="img/header/united-kingdom.png" alt="UK flag">
+                    <div id="flags" class="nav-links__flags">
+                        <div data-language="es">
+                            <img class="flag spanish hidden" src="img/header/spain.png" alt="spanish flag">
+                        </div>
+                        <div data-language="en">
+                            <img class="flag english" src="img/header/united-kingdom.png" alt="UK flag">
+                        </div>
                     </div>
-                    <div>
-                        <input type="checkbox" id="checkbox" class="checkbox">
-                        <label for="checkbox" class="label">
-                            <i class="fas fa-sun"></i>
-                            <i class="fas fa-moon"></i>
-                            <div class="ball"></div>
-                        </label>
-                    </div>
+
+<!-- repasar flex en movil  
+ -->
                 </div>
-                <div id="toggleButton" class="menu-btn">
-                    <div class="menu-btn__burger burger-clear"></div>
+                <div>
+                    <input type="checkbox" id="checkbox" class="checkbox">
+                    <label for="checkbox" class="label">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-moon"></i>
+                        <div class="ball"></div>
+                    </label>
                 </div>
             </div>
+            <div id="toggleButton" class="menu-btn">
+                <div class="menu-btn__burger burger-clear"></div>
+            </div>
+            </div>
             <ol id="navbarLinks" class="nav-links links-clear">
-                <li><a class="nav-link item-clear" href="#home"><span>Inicio</span></a></li>
-                <li><a class="nav-link item-clear" href="#aboutMe"><span>Sobre mí</span></a></li>
-                <li><a class="nav-link item-clear" href="#projects"><span>Proyectos</span></a></li>
-                <li><a class="nav-link item-clear" href="#contact"><span>Contacto</span></a></li>
-                <li><a class="nav-link item-clear" href="/img/about/cv-esp.pdf" target="_blank"><span>Mi CV</span></a>
+                <li><a class="nav-link item-clear" href="#home"><span data-section="navbar" data-value="link-1">Inicio</span></a></li>
+                <li><a class="nav-link item-clear" href="#aboutMe"><span data-section="navbar" data-value="link-2">Sobre mí</span></a></li>
+                <li><a class="nav-link item-clear" href="#projects"><span data-section="navbar" data-value="link-3">Proyectos</span></a></li>
+                <li><a class="nav-link item-clear" href="#contact"><span data-section="navbar" data-value="link-4">Contacto</span></a></li>
+                <li><a class="nav-link item-clear" href="/img/about/cv-esp.pdf" target="_blank"><span data-section="navbar" data-value="pdf">Mi CV</span></a>
                 </li>
             </ol>
         </nav>
@@ -52,35 +60,35 @@
         <section id="home" class="home-container">
             <div id="main" class="main box box-clear">
                 <div class="headline">
-                    <p class="greet">Soy</p>
+                    <p class="greet" data-section="atf" data-value="greet">Soy</p>
                     <h1 class="title font-alt-clear">Gabriel Maimó<span>.</span></h1>
                 </div>
-                <h3 class="subtitle-xl">Un desarrollador web junior Fullstack
+                <h3 class="subtitle-xl" data-section="atf" data-value="subtitle-xl">Un desarrollador web junior Fullstack
                     con ganas de trabajar en proyectos reales.</h3>
-                <h3 class="subtitle-sm">Desarrollador web <span class="font-alt-clear">junior</span> Fullstack.</h3>
-                <a href="#contact" class="btn-home btn-clear">Contáctame</a>
+                <h3 class="subtitle-sm" data-section="atf" data-value="subtitle-sm">Desarrollador web junior Fullstack.</h3>
+                <a href="#contact" class="btn-home btn-clear" data-section="atf" data-value="atf-contact">Contáctame</a>
             </div>
         </section>
 
         <!--about me section-->
         <section id="aboutMe" class="about-me-container">
-            <h2 class="font-alt-clear">Sobre mí</h2>
+            <h2 class="font-alt-clear" data-section="about-me" data-value="about-title">Sobre mí</h2>
             <div class="about-me-content">
                 <div class="about-me-description">
-                    <p>En Marzo de 2022 descubrí los bootcamps sobre desarrollo web, hacía tiempo quería realizar un
+                    <p data-section="about-me" data-value="about-p1">En Marzo de 2022 descubrí los bootcamps sobre desarrollo web, hacía tiempo quería realizar un
                         cambio en mi vida y la programación siempre me había llamado la atención.
                         Cursé el <a href="https://www.credential.net/521afbca-64ea-426f-b8ee-a3e9dd9d5ab6#gs.iokeeg"
-                            target="_blank" class="font-alt-clear">bootcamp Hackademy de Aulab</a> donde aprendí varias
-                        tecnologías.
+                            target="_blank" class="font-alt-clear" data-section="about-me" data-value="about-a1">bootcamp Hackademy de Aulab</a><span data-section="about-me" data-value="about-span1"> donde aprendí varias
+                        tecnologías.</span>
                     </p><br>
-                    <p>Ahora soy consciente de la cantidad de material didáctico y documentación que está al
+                    <p data-section="about-me" data-value="about-p2">Ahora soy consciente de la cantidad de material didáctico y documentación que está al
                         alcance de todos. Por lo que continúo absorbiendo conocimientos de forma autodidacta.
                         Actualmente curso <a href="https://www.udemy.com/course/master-completo-java-de-cero-a-experto/"
-                            target="_blank" class="font-alt-clear">Máster Completo en Java (+127 hrs)
-                        </a> en la plataforma <a href="https://www.udemy.com/" target="_blank"
-                            class="font-alt-clear">Udemy</a>.
+                            target="_blank" class="font-alt-clear" data-section="about-me" data-value="about-a2">Máster Completo en Java (+127 hrs)
+                        </a><span data-section="about-me" data-value="about-span2"> en la plataforma </span><a href="https://www.udemy.com/" target="_blank"
+                            class="font-alt-clear">Udemy</a><span data-section="about-me" data-value="about-span4">.</span>
                     </p><br>
-                    <p><b>En esta sección se puede observar un mapa con las tecnologías que conozco.</b></p><br>
+                    <p><b data-section="about-me" data-value="about-b">En esta sección se puede observar un mapa con las tecnologías que conozco.</b></p><br>
                 </div>
                 <!--canvas jquery technologies map-->
                 <div id="myCanvasContainer" class="canvas-container">
@@ -114,7 +122,7 @@
 
         <!--projects section-->
         <section id="projects" class="projects-container">
-            <h2 class="font-alt-clear">Proyectos</h2>
+            <h2 class="font-alt-clear" data-section="projects" data-value="projects-title">Proyectos</h2>
             <div class="gallery">
 
                 <!-- card 1 -->
@@ -143,7 +151,7 @@
                 <div class="overlay" id="modal1">
                     <div class="modal-content modal-clear">
                         <div class="modal-title">Pagaya</div>
-                        <h3>Proyecto final del bootcamp Hackademy de Aulab. Implementación de una página web de
+                        <h3 data-section="projects" data-value="projects1-desc">Proyecto final del bootcamp Hackademy de Aulab. Implementación de una página web de
                             compra-venta de articulos de segunda mano. Incluye las siguientes funcionalidades:
                         </h3>
                         <ul class="list-1">
@@ -156,29 +164,29 @@
                             <li>npm</li>
                         </ul>
                         <ul class="list-2">
-                            <li>Autenticación con Fortify</li>
-                            <li>Opción subir anuncio y visualización de los mismos</li>
-                            <li>Relaciones 1-N</li>
-                            <li>Sección revisor para moderar anuncios</li>
-                            <li>Modelo Vista Controlador (MVC)</li>
-                            <li>Multi-lenguaje. Español, Inglés e Italiano</li>
-                            <li>Queue work asíncrona para redimensión de imagenes subidas</li>
-                            <li>API de Google vision con detección de caras</li>
+                            <li data-section="projects" data-value="project1-li1">Autentificación con Fortify</li>
+                            <li data-section="projects" data-value="project1-li2">Opción subir anuncio y visualización de los mismos</li>
+                            <li data-section="projects" data-value="project1-li3">Relaciones 1-N</li>
+                            <li data-section="projects" data-value="project1-li4">Sección revisor para moderar anuncios</li>
+                            <li data-section="projects" data-value="project1-li5">Modelo Vista Controlador (MVC)</li>
+                            <li data-section="projects" data-value="project1-li6">Multi-lenguaje. Español, Inglés e Italiano</li>
+                            <li data-section="projects" data-value="project1-li7">Queue work asíncrona para redimensión de imagenes subidas</li>
+                            <li data-section="projects" data-value="project1-li8">API de Google vision con detección de caras</li>
                             <!-- <li>Buscador texto</li> -->
-                            <li>Búsqueda de contenido por categorías</li>
-                            <li>Sección "Trabaja con nosotros" con envío de formulario</li>
+                            <li data-section="projects" data-value="project1-li9">Búsqueda de contenido por categorías</li>
+                            <li data-section="projects" data-value="project1-li10">Sección "Trabaja con nosotros" con envío de formulario</li>
                         </ul>
                         <div class="modal-buttons">
                             <div class="btn-cerrar">
                                 <a href="https://github.com/gmaimo/pagaya-laravel" target="_blank"
-                                    class="modal-btn-code-clear modal-btn btn-project">Código</a>
+                                    class="modal-btn-code-clear modal-btn btn-project" data-section="projects" data-value="project-cbtn">Código</a>
                             </div>
                             <div class="btn-cerrar">
                                 <div class="modal-btn btn-project btn-clear" data-target="#modal1">Cerrar</div>
                             </div>
                             <div class="btn-cerrar">
                                 <a href="https://www.gmaimo.com/pagaya.html"
-                                    class="modal-btn-web-clear modal-btn btn-project">Galería</a>
+                                    class="modal-btn-web-clear modal-btn btn-project" data-section="projects" data-value="project-gbtn">Galería</a>
                             </div>
                         </div>
                     </div>
@@ -212,9 +220,8 @@
                 <!-- modal 2 -->
                 <div class="overlay" id="modal2">
                     <div class="modal-content modal-clear">
-                        <div class="modal-title">Pagaya</div>
-                        <h3>Proyecto final del bootcamp Hackademy de Aulab. Implementación de una página web de
-                            compra-venta de articulos de segunda mano. Incluye las siguientes funcionalidades:
+                        <div class="modal-title">Beer Radar</div>
+                        <h3 data-section="projects" data-value="project2-desc">Página web donde encontrar nuevas cervecerías con una amplia carta de cervezas disponible.
                         </h3>
                         <ul class="list-1">
                             <li>Laravel</li>
@@ -227,27 +234,28 @@
                             <li>responsive</li>
                         </ul>
                         <ul class="list-2">
-                            <li>Autenticación con Fortify</li>
-                            <li>Opción subir cervecería</li>
-                            <li>Relaciones 1-N</li>
-                            <li>Relaciones N-N (Cervecerías - Cervezas)</li>
-                            <li>Modelo Vista Controlador (MVC)</li>
-                            <li>Responsive</li>
-                            <li>Sección sugerir cervecería - formulario</li>
-                            <li>Opción editar y eliminar para el autor del articulo</li>
-                            <br><br><br>
+                            <li data-section="projects" data-value="project2-li1">Autenticación con Fortify</li>
+                            <li data-section="projects" data-value="project2-li2">Opción subir cervecería</li>
+                            <li data-section="projects" data-value="project2-li3">Opción subir cerveza</li>
+                            <li data-section="projects" data-value="project2-li4">Relaciones 1-N</li>
+                            <li data-section="projects" data-value="project2-li5">Relaciones N-N (Cervecerías - Cervezas)</li>
+                            <li data-section="projects" data-value="project2-li6">Modelo Vista Controlador (MVC)</li>
+                            <li data-section="projects" data-value="project2-li7">Responsive</li>
+                            <li data-section="projects" data-value="project2-li8">Sección sugerir cervecería - formulario</li>
+                            <li data-section="projects" data-value="project2-li9">Opción editar y eliminar para el autor del artículo</li>
                         </ul>
+                        <br><br>
                         <div class="modal-buttons">
                             <div class="btn-cerrar">
                                 <a href="https://github.com/gmaimo/brewerie-app" target="_blank"
-                                    class="modal-btn-code-clear modal-btn btn-project">Código</a>
+                                    class="modal-btn-code-clear modal-btn btn-project" data-section="projects" data-value="project-cbtn">Código</a>
                             </div>
                             <div class="btn-cerrar">
                                 <div class="modal-btn btn-project btn-clear" data-target="#modal2">Cerrar</div>
                             </div>
                             <div class="btn-cerrar">
                                 <a href="https://www.gmaimo.com/beer-radar.html"
-                                    class="modal-btn-web-clear modal-btn btn-project">Galería</a>
+                                    class="modal-btn-web-clear modal-btn btn-project" data-section="projects" data-value="project-gbtn">Galería</a>
                             </div>
                         </div>
                     </div>
@@ -271,30 +279,33 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- modal 3 -->
                 <div class="overlay" id="modal3">
                     <div class="modal-content modal-clear">
                         <div class="modal-title">ESA Homepage</div>
-                        <h3>Simulación de la página principal de la Agencia Espacial Europea. Página dedicada completamente al front-end.
+                        <h3 data-section="projects" data-value="project3-desc">Simulación de la página principal de la Agencia Espacial Europea. Página dedicada
+                            completamente al front-end.
                         </h3>
+                        <br>
                         <ul class="list-1">
                             <li>HTML5</li>
                             <li>CSS3</li>
-                            <li>Sass</li>
-                            <li>Javascript</li>
+                            <li>Bootstrap</li>
                             <li>responsive</li>
                         </ul>
+                        <br><br><br><br><br><br><br>
                         <div class="modal-buttons">
                             <div class="btn-cerrar">
                                 <a href="https://github.com/gmaimo/ESA_homepage" target="_blank"
-                                    class="modal-btn-code-clear modal-btn btn-project">Código</a>
+                                    class="modal-btn-code-clear modal-btn btn-project" data-section="projects" data-value="project-cbtn">Código</a>
                             </div>
                             <div class="btn-cerrar">
                                 <div class="modal-btn btn-project btn-clear" data-target="#modal3">Cerrar</div>
                             </div>
                             <div class="btn-cerrar">
-                                <a href="https://www.gmaimo.es/" target="_blank" class="modal-btn-web-clear modal-btn btn-project">Web</a>
+                                <a href="https://www.gmaimo.es/" target="_blank"
+                                    class="modal-btn-web-clear modal-btn btn-project">Web</a>
                             </div>
                         </div>
                     </div>
@@ -324,7 +335,8 @@
                 <div class="overlay" id="modal4">
                     <div class="modal-content modal-clear">
                         <div class="modal-title">Star cards</div>
-                        <h3>Listado de estrellas 'con nombre' obtenidas mediante una API rest. Se detalla la información básica de las estrellas en cards con el color de la estrella de fondo.
+                        <h3 data-section="projects" data-value="project4-desc">Listado de estrellas "con nombre" obtenidas mediante una API rest. Se detalla la información
+                            básica de las estrellas en cards con el color de la estrella de fondo.
                         </h3>
                         <ul class="list-1">
                             <li>HTML5</li>
@@ -333,10 +345,11 @@
                             <li>Javascript</li>
                             <li>responsive</li>
                         </ul>
+                        <br><br><br><br><br><br><br>
                         <div class="modal-buttons">
                             <div class="btn-cerrar">
                                 <a href="https://github.com/gmaimo/star-cards" target="_blank"
-                                    class="modal-btn-code-clear modal-btn btn-project">Código</a>
+                                    class="modal-btn-code-clear modal-btn btn-project" data-section="projects" data-value="project-cbtn">Código</a>
                             </div>
                             <div class="btn-cerrar">
                                 <div class="modal-btn btn-project btn-clear" data-target="#modal4">Cerrar</div>
@@ -345,11 +358,11 @@
                     </div>
                 </div>
 
-                 <!-- card 5 -->
-                 <div class="card">
+                <!-- card 5 -->
+                <div class="card">
                     <div class="front" style="background-image: url(./img/projects/calculadora.png)"></div>
                     <div class="back card-clear">
-                        <h5 class="card-title">Calculadora</h5>
+                        <h5 class="card-title" data-section="projects" data-value="project5-title">Calculadora</h5>
                         <div class="card-desc">
                             <ul class="card-list-clear">
                                 <li>HTML5</li>
@@ -363,12 +376,12 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- modal 5 -->
                 <div class="overlay" id="modal5">
                     <div class="modal-content modal-clear">
-                        <div class="modal-title">Calculadora</div>
-                        <h3>Calculadora básica mediante javascript.
+                        <div class="modal-title"  data-section="projects" data-value="project5-title">Calculadora</div>
+                        <h3 data-section="projects" data-value="project5-desc">Calculadora básica mediante javascript.
                         </h3>
                         <ul class="list-1">
                             <li>HTML5</li>
@@ -376,10 +389,11 @@
                             <li>Javascript</li>
                             <li>responsive</li>
                         </ul>
+                        <br><br><br><br><br><br><br><br>
                         <div class="modal-buttons">
                             <div class="btn-cerrar">
                                 <a href="https://github.com/gmaimo/toolbox" target="_blank"
-                                    class="modal-btn-code-clear modal-btn btn-project">Código</a>
+                                    class="modal-btn-code-clear modal-btn btn-project" data-section="projects" data-value="project-cbtn">Código</a>
                             </div>
                             <div class="btn-cerrar">
                                 <div class="modal-btn btn-project btn-clear" data-target="#modal5">Cerrar</div>
@@ -400,6 +414,7 @@
                                 <li>Sass</li>
                                 <li>Javascript</li>
                                 <li>responsive</li>
+                                <li>JSON</li>
                             </ul>
                             <div class="project-btn-margin">
                                 <div class="btn-project btn-clear" data-target="#modal6">Ver más</div>
@@ -412,7 +427,7 @@
                 <div class="overlay" id="modal6">
                     <div class="modal-content modal-clear">
                         <div class="modal-title">Portfolio</div>
-                        <h3>Muestra una descripción de mis conocimientos, una sección con mis proyectos y un
+                        <h3 data-section="projects" data-value="project6-desc">Muestra una descripción de mis conocimientos, una sección con mis proyectos y un
                             formulario de contacto. Incluye las siguientes funcionalidades:
                         </h3>
                         <ul class="list-1">
@@ -421,18 +436,20 @@
                             <li>Sass</li>
                             <li>Javascript</li>
                             <li>responsive</li>
+                            <li>JSON</li>
                         </ul>
+                        <br>
                         <ul class="list-2">
-                            <li>Modo oscuro</li>
-                            <li>Multi-lenguaje</li>
-                            <li>Envio de formulario mediante plataforma formsubmit.co</li>
-                            <li>Uso de procesador de CSS SASS</li>
-                            <li>Uso de jquery para mapa de etiquetas</li>
-                            <li>Responsive</li>
+                            <li data-section="projects" data-value="project6-li1">Modo oscuro</li>
+                            <li data-section="projects" data-value="project6-li2">Multi-lenguaje</li>
+                            <li data-section="projects" data-value="project6-li3">Envio de formulario mediante plataforma "formsubmit.co"</li>
+                            <li data-section="projects" data-value="project6-li4">Uso de procesador de CSS SASS</li>
+                            <li data-section="projects" data-value="project6-li5">Uso de jQuery para mapa de etiquetas</li>
                         </ul>
+                        <br><br>
                         <div class="modal-buttons">
                             <div class="btn-cerrar">
-                                <div class="modal-btn-code-clear modal-btn btn-project">Código</div>
+                                <div class="modal-btn-code-clear modal-btn btn-project" data-section="projects" data-value="project-cbtn">Código</div>
                             </div>
                             <div class="btn-cerrar">
                                 <div class="modal-btn btn-project btn-clear" data-target="#modal6">Cerrar</div>
@@ -445,7 +462,7 @@
                 </div>
 
 
-               
+
                 <br>
                 <br>
 
@@ -457,7 +474,7 @@
 
         <!--contact section-->
         <section id="contact" class="contact-container">
-            <h2 class="font-alt-clear">Contacto</h2>
+            <h2 class="font-alt-clear" data-section="contact" data-value="contact-title">Contacto</h2>
             <div>
                 <div class="contact-form">
                     <form action="https://formsubmit.co/gabrielmaimorigo@gmail.com" method="POST" class="form-clear">
@@ -474,7 +491,7 @@
                                 required></textarea>
                         </div>
                         <div class="submit">
-                            <button type="submit" class="btn-form btn-clear" onclick="myFunction()">Enviar
+                            <button type="submit" class="btn-form btn-clear" onclick="myFunction()" data-section="contact" data-value="contact-btn">Enviar
                                 mensaje</button>
                         </div>
                     </form>
@@ -575,7 +592,7 @@
                 </ul>
             </div>
             <div class="credits">
-                <h6>Designed & created by Gabriel Maimó</h6>
+                <h6 data-section="footer" data-value="credits">Diseño y código - Gabriel Maimó &trade;</h6>
             </div>
         </footer>
 

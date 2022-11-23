@@ -365,3 +365,26 @@ closeModal.forEach(btn => {
         modals.forEach((modal) => modal.classList.remove("active"));
     }
 } */
+
+//Transalate page
+
+const flagSelect = document.getElementById("flags");
+
+const textsToChange = document.querySelectorAll("[data-section]")
+
+const changeLan = async language => {
+    const requestJson = await fetch(`./languages/${language}.json`)
+    const texts = await requestJson.json()
+
+    for (const textToChange of textsToChange) {
+        const section = textToChange.dataset.section;
+        const value = textToChange.dataset.value;
+
+        textToChange.innerHTML = texts[section][value];
+    }
+
+}
+
+flagSelect.addEventListener('click', (e) => {
+    changeLan(e.target.parentElement.dataset.language);
+});

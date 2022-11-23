@@ -1,0 +1,69 @@
+{
+    "navbar": {
+        "link-1": "Home",
+        "link-2": "About me",
+        "link-3": "Projects",
+        "link-4": "Contact me",
+        "pdf": "My CV"
+    },
+    "atf": {
+        "greet": "I'm",
+        "subtitle-xl": "A junior Fullstack developer ready to work on real projects.",
+        "subtitle-sm": "Junior Fullstack developer",
+        "atf-contact": "Contact me"
+    },
+    "about-me": {
+        "about-title": "About me",
+        "about-p1": "In March 2022 I discovered web development bootcamps. I have been wanting to make a change in my life for a long time and programming had always caught my attention. I studied the ",
+        "about-a1": "Hackademy Aulab bootcamp",
+        "about-span1": " where I learned a long variety of technologies.",
+        "about-p2": "Now I'm aware of the amount of resources and documentation that is available to everyone. I continue absorbing knowledge by studying ",
+        "about-a2": "Máster Completo en Java (+127 hrs)",
+        "about-span2": " on the ",
+        "about-span4": "platform.",
+        "about-b": "On this section can be observed a map with the tecnologies i've learned during these months."
+    },
+    "projects": {
+        "projects-title": "Projects",
+        "project1-desc": "Hackademy Aulab final project. Development of a website for the sale of second-hand items. Includes the following functions:",
+        "project1-li1": "Fortify authentification",
+        "project1-li2": "Option to upload ad and visualization of it",
+        "project1-li3": "1-N Relations",
+        "project1-li4": "Revisor section to filter ads",
+        "project1-li5": "Model View Controller (MVC)",
+        "project1-li6": "Multi-language. Spanish, English and Italian",
+        "project1-li7": "Asynchronous queue work to resize uploading images",
+        "project1-li8": "Face detection and censor with Google vision API",
+        "project1-li9": "Content search per category",
+        "project1-li10": "\"Work with us\" section with submit form",
+        "project-cbtn": "Code",
+        "project-gbtn": "Gallery",
+        "project2-desc": "Website to find new breweries with a varied beer menu available.",
+        "project2-li1": "Fortify authentification",
+        "project2-li2": "Upload brewery option",
+        "project2-li3": "Upload beer option",
+        "project2-li4": "1-N Relations",
+        "project2-li5": "N-N Relations (Breweries - Beers)",
+        "project2-li6": "Model View Controller (MVC)",
+        "project2-li7": "Responsive",
+        "project2-li8": "Suggest brewerie form section",
+        "project2-li9": "Option for the author to edit or delete the article",
+        "project3-desc": "European Space Agency (ESA) landing page simulation. Web page fully dedicated to front-end.",
+        "project4-desc": "List of stars obtained via rest API. Basic star information detailed in cards.",
+        "project5-title": "Calculator",
+        "project5-desc": "Basic calculator in javascript.",
+        "project6-desc": "It shows a description of my knowledge, a projects section and a contact form. Includes the following functionalitites:",
+        "project6-li1": "Dark mode",
+        "project6-li2": "Multi-language",
+        "project6-li3": "Form submit via \"formsubmit.co\" email platform",
+        "project6-li4": "Use of SASS CSS processor",
+        "project6-li5": "Use of jQuery on tags-map"
+    },
+    "contact": {
+        "contact-title": "Contact me",
+        "contact-btn": "Send message"
+    },
+    "footer": {
+        "credits": "Design & code - Gabriel Maimó &trade;"
+    }
+}
